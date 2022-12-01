@@ -1,0 +1,5 @@
+<p>e-two-away works!</p>
+<h1>{{ firstName }}</h1>
+<input type="text" [(ngModel)]="firstName">
+<label for="without"> without ngModel</label>
+<input type="text" [value]="firstName" (input)="firstName=$any($event.target).value" id="without">
