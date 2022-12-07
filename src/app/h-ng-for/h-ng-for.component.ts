@@ -6,12 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./h-ng-for.component.css']
 })
 export class HNgForComponent implements OnInit {
-      courses:string[] =[
+      courses:any[] =[
           "typescript",
           "angular"
       ];
       constructor() {}
       ngOnInit(): void {
-
+        for( let index=1; index <= 100 ; index++){
+          this.courses.push(index);
+        }
       }
 }

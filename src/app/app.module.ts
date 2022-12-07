@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule} from '@angular/common';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,16 @@ import { HNgForComponent } from './h-ng-for/h-ng-for.component';
 import { INgSwitchComponent } from './i-ng-switch/i-ng-switch.component';
 import { JNgClassComponent } from './j-ng-class/j-ng-class.component';
 import { KNgStyleComponent } from './k-ng-style/k-ng-style.component';
+import { GameNumbersComponent } from './game-numbers/game-numbers.component';
+import { UTemplateDrivenComponent } from './u-template-driven/u-template-driven.component';
+import { VDataDrivenComponent } from './v-data-driven/v-data-driven.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ProductsComponent } from './tutorial-router/products/products.component';
+import { ProductComponent } from './tutorial-router/product/product.component';
+import { ProductAddComponent } from './tutorial-router/product-add/product-add.component';
+import { ProductEditComponent } from './tutorial-router/product-edit/product-edit.component';
+import { ProductDeleteComponent } from './tutorial-router/product-delete/product-delete.component';
+import { ProductModule } from './product/product.module';
 
 @NgModule({
   declarations: [
@@ -32,11 +44,22 @@ import { KNgStyleComponent } from './k-ng-style/k-ng-style.component';
     INgSwitchComponent,
     JNgClassComponent,
     KNgStyleComponent,
+    GameNumbersComponent,
+    VDataDrivenComponent,
+    UTemplateDrivenComponent,
+    ProductsComponent,
+    ProductComponent,
+    ProductAddComponent,
+    ProductEditComponent,
+    ProductDeleteComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    CommonModule,
+    ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent]
