@@ -44,7 +44,7 @@ export class ProductService {
     let stringProducts = JSON.stringify(this.products);
     window.localStorage.setItem('products',stringProducts);
   }
-  update( id:any, data:Product){
+  update( id:any, data:any){
     this.products[id] = data;
     let stringProducts = JSON.stringify(this.products);
     window.localStorage.setItem('products',stringProducts);

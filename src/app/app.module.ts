@@ -27,7 +27,6 @@ import { ProductComponent } from './tutorial-router/product/product.component';
 import { ProductAddComponent } from './tutorial-router/product-add/product-add.component';
 import { ProductEditComponent } from './tutorial-router/product-edit/product-edit.component';
 import { ProductDeleteComponent } from './tutorial-router/product-delete/product-delete.component';
-import { ProductModule } from './product/product.module';
 
 @NgModule({
   declarations: [
@@ -59,7 +58,6 @@ import { ProductModule } from './product/product.module';
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
-    ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent]

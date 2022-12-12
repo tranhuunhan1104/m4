@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductAddComponent } from './tutorial-router/product-add/product-add.component';
 
+
 import { ProductDeleteComponent } from './tutorial-router/product-delete/product-delete.component';
 import { ProductEditComponent } from './tutorial-router/product-edit/product-edit.component';
 import { ProductComponent } from './tutorial-router/product/product.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
 
 
 @NgModule({
+  declarations: [],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
