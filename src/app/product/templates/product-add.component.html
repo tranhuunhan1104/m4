@@ -34,6 +34,15 @@
              class="help-block text-danger">Minlength not valid</p>
 
         </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input
+            ngModel
+            #description="ngModel"
+            type="text" class="form-control" name="description" placeholder="Description" >
+
+
+        </div>
 
         <div class="form-group">
             <button type="submit" [disabled]="!formProduct.valid" class="btn btn-primary">Submit</button>

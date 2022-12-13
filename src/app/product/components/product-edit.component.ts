@@ -24,14 +24,16 @@ export class ProductEditComponent {
       this.id = id;
       this._ProductService.find(id).subscribe(product => {
         this.product = product;
-        console.log(this.product.name);
         this.productForm = new FormGroup({
-
           name: new FormControl(this.product.name,[
             Validators.required,
             Validators.minLength(3)
           ]),
           price: new FormControl(this.product.price,[
+            Validators.required,
+            Validators.minLength(3)
+          ]),
+          description: new FormControl(this.product.description,[
             Validators.required,
             Validators.minLength(3)
           ]),
@@ -45,6 +47,7 @@ export class ProductEditComponent {
     let productData:Product = {
       name: this.productForm.value.name,
       price: this.productForm.value.price,
+      description: this.productForm.value.description,
     }
     this._ProductService.update(this.id, productData).subscribe(() => {
       //chuyen huong ve list

@@ -17,6 +17,7 @@ export class ProductAddComponent {
     let productData:Product = {
       name: value.name,
       price: value.price,
+      description: value.description,
     }
     this._ProductService.save( productData).subscribe(() => {
       //chuyen huong ve list
